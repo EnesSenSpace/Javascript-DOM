@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>DOM Yöntemleri Tablosu</title>
+        <link rel="stylesheet" href="style.css" />
+        <style>
+            h1 {
+                text-align: center;
+            }
+
+            table {
+                margin: auto;
+                border-collapse: collapse;
+                border: 2px solid black;
+                font-size: 18px;
+            }
+
+            th,
+            td {
+                border: 1px solid black;
+                padding: 10px;
+            }
+
+            th {
+                background-color: #333;
+                color: white;
+            }
+
+            tr:nth-child(even) {
+                background-color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>DOM Yöntemleri</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Metod Adı</th>
+                    <th>Açıklama</th>
+                    <th>Örnek Kullanım</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>getElementById(id)</td>
+                    <td>
+                        Belirtilen id özniteliğine sahip HTML öğesini döndürür.
+                    </td>
+                    <td>document.getElementById("myId")</td>
+                </tr>
+                <tr>
+                    <td>getElementsByClassName(class)</td>
+                    <td>
+                        Belirtilen sınıf adına sahip tüm HTML öğelerini bir dizi
+                        olarak döndürür.
+                    </td>
+                    <td>document.getElementsByClassName("myClass")</td>
+                </tr>
+                <tr>
+                    <td>getElementsByTagName(tag)</td>
+                    <td>
+                        Belirtilen etikete sahip tüm HTML öğelerini bir dizi
+                        olarak döndürür.
+                    </td>
+                    <td>document.getElementsByTagName("p")</td>
+                </tr>
+                <tr>
+                    <td>querySelector(selector)</td>
+                    <td>
+                        Belirtilen CSS seçicisine göre ilk eşleşen öğeyi
+                        döndürür.
+                    </td>
+                    <td>document.querySelector("#myId .myClass")</td>
+                </tr>
+                <tr>
+                    <td>querySelectorAll(selector)</td>
+                    <td>
+                        Belirtilen CSS seçicisine göre tüm eşleşen öğeleri bir
+                        NodeList nesnesi olarak döndürür.
+                    </td>
+                    <td>document.querySelectorAll("p.myClass")</td>
+                </tr>
+                <tr>
+                    <td>createElement(tagName)</td>
+                    <td>
+                        Belirtilen etiket adıyla yeni bir HTML öğesi oluşturur.
+                    </td>
+                    <td>document.createElement("div")</td>
+                </tr>
+                <tr>
+                    <td>appendChild(node)</td>
+                    <td>Bir düğümü belirtilen öğenin sonuna ekler.</td>
+                    <td>
+                        document.getElementById("myId").appendChild(newElement)
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <script src="script.js"></script>
+    </body>
+</html>
